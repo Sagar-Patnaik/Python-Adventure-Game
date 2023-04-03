@@ -60,22 +60,22 @@ while True:
 
         if room_change == 'New':
             # Printing current room description
-            print(f'\n> {room_name}\n')
+            print(f'> {room_name}\n')
             print(f'{current_room["desc"]}')
 
             if room_name == 'Outside':
                 print("\nGoodbye!")
                 break
 
+            # Printing available items (if any)
+            if 'items' in current_room and current_room['items']:
+                items = ', '.join(current_room['items'])
+                print(f'\nItems: {items}')
+
             # Printing available exits
             if 'exits' in current_room:
                 exits = ' '.join(current_room['exits'])
                 print(f'\nExits: {exits}\n')
-
-            # Printing available items (if any)
-            if 'items' in current_room and current_room['items']:
-                items = ', '.join(current_room['items'])
-                print(f'Items: {items}\n')
 
             # Changing room_change status
             room_change = 'old'
@@ -158,7 +158,7 @@ while True:
 
         elif verb == 'go':
             if noun in current_room['exits']:
-                print(f'You go {noun}.')
+                print(f'You go {noun}.\n')
 
                 # Condition for winning.
                 temp_room = current_room
