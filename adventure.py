@@ -132,9 +132,9 @@ while True:
             break
 
         elif verb == 'help':
-            print('Possible verbs:')
+            print('You can run the following commands:')
             for key, value in verbs.items():
-                print(f'{key}: {value}')
+                print(f'  {key}: {value}')
 
         elif verb == 'drop':
             if not inventory:
