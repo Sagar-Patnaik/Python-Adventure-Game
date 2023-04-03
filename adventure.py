@@ -188,16 +188,20 @@ while True:
                 print(f"There's no way to go {noun}.")
 
         elif verb == 'get':
-            if noun in current_room['items']:
-                current_room['items'].remove(noun)
-                print(f'You pick up the {noun}.')
-                inventory.append(noun)
 
-            elif noun is None:
-                print('Sorry, you need to \'get\' something.')
+            if 'items' in current_room:
+                if noun in current_room['items']:
+                    current_room['items'].remove(noun)
+                    print(f'You pick up the {noun}.')
+                    inventory.append(noun)
 
+                elif noun is None:
+                    print('Sorry, you need to \'get\' something.')
+
+                else:
+                    print(f'There\'s no {noun} anywhere.')
             else:
-                print(f'There\'s no {noun} anywhere')
+                print(f'There\'s no {noun} anywhere.')
 
         elif verb == 'inventory' or verb == 'inv':
             if not inventory:
@@ -206,7 +210,7 @@ while True:
             else:
                 print("Inventory:")
                 for item in inventory:
-                    print(f' {item}')
+                    print(f'  {item}')
         else:
             print("I don't understand that.")
 
