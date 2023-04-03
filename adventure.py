@@ -60,8 +60,8 @@ while True:
 
         if room_change == 'New':
             # Printing current room description
-            print('\n> ' + room_name + '\n')
-            print(current_room['desc'])
+            print(f'\n> {room_name}\n')
+            print(f'{current_room["desc"]}')
 
             if room_name == 'Outside':
                 print("\nGoodbye!")
@@ -69,11 +69,13 @@ while True:
 
             # Printing available exits
             if 'exits' in current_room:
-                print('\nExits:', ', '.join(current_room['exits']), '\n')
+                exits = ' '.join(current_room['exits'])
+                print(f'\nExits: {exits}\n')
 
             # Printing available items (if any)
             if 'items' in current_room and current_room['items']:
-                print('Items:', ', '.join(current_room['items']), '\n')
+                items = ', '.join(current_room['items'])
+                print(f'Items: {items}\n')
 
             # Changing room_change status
             room_change = 'old'
@@ -132,7 +134,7 @@ while True:
         elif verb == 'help':
             print('Possible verbs:')
             for key, value in verbs.items():
-                print(key + ':', value)
+                print(f'{key}: {value}')
 
         elif verb == 'drop':
             if not inventory:
@@ -144,11 +146,11 @@ while True:
                     current_room['items'].append(noun)
                 else:
                     current_room['items'] = [noun]
-                print('You have dropped the {}.'.format(noun))
+                print(f'You have dropped the {noun}.')
             elif noun is None:
                 print('Sorry, you need to \'drop\' something.')
             else:
-                print("You don't have {} in your inventory.".format(noun))
+                print(f"You don't have {noun} in your inventory.")
 
         elif verb == 'look':
             room_change = 'New'
@@ -180,22 +182,22 @@ while True:
                         room_change = 'Old'
 
             elif noun is None:
-                print('Sorry, you need to \'go\' somewhere')
+                print('Sorry, you need to \'go\' somewhere.')
 
             else:
-                print("There's no way to go {}.".format(noun))
+                print(f"There's no way to go {noun}.")
 
         elif verb == 'get':
             if noun in current_room['items']:
                 current_room['items'].remove(noun)
-                print('You are picking up the {}.'.format(noun))
+                print(f'You pick up the {noun}.')
                 inventory.append(noun)
 
             elif noun is None:
                 print('Sorry, you need to \'get\' something.')
 
             else:
-                print('There is no {} here.'.format(noun))
+                print(f'There\'s no {noun} anywhere')
 
         elif verb == 'inventory' or verb == 'inv':
             if not inventory:
@@ -204,7 +206,7 @@ while True:
             else:
                 print("Inventory:")
                 for item in inventory:
-                    print("  " + item)
+                    print(f' {item}')
         else:
             print("I don't understand that.")
 
