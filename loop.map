@@ -1,0 +1,62 @@
+[
+    {
+        "name": "cell",
+        "desc": "You are in a cell. There is a bed and a toilet.",
+        "exits": {"north": 1, "east": 2},
+        "items": []
+    },
+    {
+        "name": "hallway1",
+        "desc": "You are in a long, dimly lit hallway.",
+        "exits": {"west": 3, "east": 4, "up": 6},
+        "items": []
+    },
+    {
+        "name": "hallway2",
+        "desc": "You are in a long, dimly lit hallway.",
+        "exits": {"west": 5, "east": 4, "south": 8},
+        "items": []
+    },
+    {
+        "name": "kitchen",
+        "desc": "You are in the prison kitchen. There are knives and utensils here.",
+        "exits": {"west": 1, "east": 2, "south": 7},
+        "items": ["knife"]
+    },
+    {
+        "name": "storage_room",
+        "desc": "You are in a room full of supplies and equipment.",
+        "exits": {"west": 3, "east": 5, "north": 9},
+        "items": ["rope"]
+    },
+    {
+        "name": "guard_room",
+        "desc": "You are in a small room filled with security equipment.",
+        "exits": {"south": 2, "window": 8},
+        "items": ["keycard"]
+    },
+    {
+        "name": "exercise_yard",
+        "desc": "You are in a large yard where prisoners can exercise.",
+        "exits": {"north": 1, "west": 8, "east": 9},
+        "items": []
+    },
+    {
+        "name": "library",
+        "desc": "You are in the prison library. There are many books here.",
+        "exits": {"north": 3, "west": 3, "south": 8},
+        "items": ["book"]
+    },
+    {
+        "name": "infirmary",
+        "desc": "You are in the prison infirmary. There are medical supplies here.",
+        "exits": {"north": 2, "east": 4, "west": 8},
+        "items": ["first aid kit"]
+    },
+    {
+        "name": "Outside",
+        "desc": "You have escaped the prison and are now outside. Congratulations!",
+        "exits": {},
+        "items": []
+    }
+]
