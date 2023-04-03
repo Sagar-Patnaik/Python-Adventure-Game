@@ -1,7 +1,16 @@
+Name: Sagar Patnaik
+StevensLogin: spatnaik@stevens.edu
+
+GitHUb Link :- https://github.com/Sagar-Patnaik/Python-Adventure-Game
+
+Estimated time spent in hours: 40
+
+To test adventure.py, I designed test cases and compared the expected output to the actual output to ensure accuracy. I had to meticulously match the output bit by bit, checking for errors and discrepancies to ensure the program functioned correctly.
+
 Text-based Adventure Game
 This text-based adventure game is a simple game built using Python. In the game, the player is stuck in a prison and must escape by navigating through various rooms, picking up items, and interacting with objects to progress.The game is played entirely through the command line, and the player interacts with the game by entering commands such as "go north" or "get key". The game consists of a series of rooms that the player can navigate through, each with its own description and set of exits. The objective of the game is to escape from a prison by finding and using various items scattered throughout the rooms. The game is implemented using JSON data to store the game world, and various Python data structures and control structures to implement the game mechanics.
 
-GitHUb Link :- https://github.com/Sagar-Patnaik/Python-Adventure-Game
+
 
 Game Setup
 The game data is stored in a JSON file of ".map" extention type. It is provided to the game via commandline argument and is loaded into the game using the json library. Each room in the game has a name, a description, and a list of exits that the player can use to navigate to other rooms. Additionally, rooms can contain items that the player can pick up and add to their inventory.
