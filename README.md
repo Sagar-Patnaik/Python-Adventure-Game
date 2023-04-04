@@ -45,7 +45,7 @@ The game contains some basic error handling to ensure that the game data is vali
 Running the Game
 To run the game, simply run the Python script in a terminal or command prompt. The game will begin and the player can start entering commands to interact with the game world. To exit the game, simply enter the quit command or navigate to the "Outside" room.
 
-Note: the game data is stored in a JSON file called "test.map". If you want to create your own game or modify the existing game, you can create a new JSON file and modify the game data accordingly.
+Note: the game data is stored in a JSON file called "loop.map". If you want to create your own game or modify the existing game, you can create a new JSON file and modify the game data accordingly.
 
 
 How to Play
